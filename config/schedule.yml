@@ -1,0 +1,14 @@
+notify_inactive_users:
+  cron: "30 2 * * *"
+  class: "NotifyInactiveUsersJob"
+  queue: default
+
+rating_80_users:
+  cron: "30 3 * * *"
+  class: "Rating80UsersJob"
+  queue: default
+
+top_rated_users:
+  cron: "30 4 * * 1"
+  class: "TopRatedUsersJob"
+  queue: default

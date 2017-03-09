@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h2>
+    List of the best users:
+  </h2>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Rating</th>
+    </tr>
+    <%- @top_users.each do |user| %>
+      <tr>
+        <td>user.email</td>
+        <td>user.rating</td>
+      </tr>
+    <% end%>
+  </table>
+</body>
+</html>

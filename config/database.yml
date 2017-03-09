@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: cron_test
+  password: cron_test
+
+development:
+  <<: *default
+  database: cron_test_development
+  host: 127.0.0.1
+
+test:
+  <<: *default
+  database: cron_test_test
+  host: 127.0.0.1
+
+production:
+  <<: *default
+  database: cron_test_production
+  password: <%= ENV['CRON_TEsT_DATABASE_PASSWORD'] %>
